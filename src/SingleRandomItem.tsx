@@ -25,7 +25,7 @@ export let SingleRandomItem: React.FC = () => {
   console.log(selectedProject?.weightColumnName);
   return (
     <div className="p-4 h-full flex flex-col">
-      <div className="h-full flex-1">
+      <div className="h-full flex-1 overflow-y-scroll">
         <div>
           <span className="text-sm px-2 py-1 rounded-md bg-orange-400">
             frequency: <span className="font-bold">{frequency}</span>
@@ -53,12 +53,14 @@ export let SingleRandomItem: React.FC = () => {
           </div>
         )}
       </div>
-      <button
-        className="bg-indigo-700 text-white rounded-md shadow-sm px-4 py-2 w-full"
-        onClick={next}
-      >
-        Next
-      </button>
+      <div className="py-12">
+        <button
+          className="bg-indigo-700 text-white rounded-md shadow-sm px-4 py-2 w-full"
+          onClick={next}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 };
